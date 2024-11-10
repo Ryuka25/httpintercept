@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  httpintercept_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: httpintercept_app

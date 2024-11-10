@@ -1,0 +1,15 @@
+{
+    "name": "httpintercept",
+    "context": "..",
+    // "initializeCommand": "docker-compose up --detach",
+    "dockerFile": "Dockerfile",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind",
+    "workspaceFolder": "/code",
+    "runArgs": [
+        "--name=httpintercept_api"
+    ],
+    "mounts": [
+        "source=profile,target=/root,type=volume",
+        "target=/root/.vscode-server,type=volume"
+    ]
+}
